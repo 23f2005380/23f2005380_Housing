@@ -1,0 +1,24 @@
+<div>
+    <template>
+        <div v-if="!isEmpty(category_list)">
+
+            <div v-for="i in category_list">
+                <button @click="category_selected(i)">{{i}}</button>
+
+            </div>
+            <div>
+                <div v-if="category !== null">
+                    <div v-for="j in service_list_for_booking" :key="j">
+                        {{ j }}
+                    </div>
+                </div>
+
+
+                <div v-else>
+                    No category Selected
+                </div>
+            </div>
+        </div>
+        <div v-else> No category</template>
+    </template>
+</div>
