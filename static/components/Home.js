@@ -1,17 +1,31 @@
 export default {
     template: `
-        <div class="container d-flex" :style="{height: '90vh', display: 'flex', flexDirection : 'column', justifyContent : 'center'} ">
-            <div  class="row pl-3 mt-2" :style="{height: '40%'}">
-                <div class="col-6 text-center">
-                    <div class="fs-2 pt-10">Hey, Welcome to _______ app
-                    </div>
-                    <div class="fs-4">It is a multi-user app (requires one admin and other service professionals/ customers) which acts as platform for providing comprehensive home servicing and solutions.
-                    </div>
-                </div>
-
-                <div class="col-6 d-flex pt-0 mt-0 rounded" :style="{display:'flex',alignItems: 'center',flexDirection: 'column'}"><img class="rounded" src="static/hom.png" width="80%" height="60%" alt="image" /></div>
-            </div>
-           
+      <div class="container d-flex" 
+           :style="{ height: '90vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }">
+        
+        <!-- Welcome Text Section -->
+        <div class="row text-center mb-4" :style="{ width: '80%' }">
+          <div class="col-12">
+            <h1 class="fs-1 fw-bold">Hey, Welcome to HouseHold V2 App</h1>
+            <p class="fs-5 mt-3">
+              A multi-user platform connecting admins, service professionals, and customers to provide comprehensive home servicing solutions.
+            </p>
+          </div>
         </div>
-    `
-}
+  
+        <!-- Image and Animation Section -->
+        <div class="row d-flex align-items-center justify-content-center" :style="{ width: '80%' }">
+          <div class="col-md-6 text-center">
+            <img 
+              src="static/hom.png" 
+              alt="Home Service Image" 
+              class="animated-image rounded shadow"
+              :style="{ width: '80%', height: 'auto' }"
+            />
+          </div>
+          
+        </div>
+      </div>
+    `,
+  };
+  
